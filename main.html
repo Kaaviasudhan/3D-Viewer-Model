@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Viewers</title>
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/mD2dngwJ/3d-viewer-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    
+    <!-- Header -->
+    <div class="header">
+        <a class="logo">3D View</a>
+        
+        <div class="header-right">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#magic">Magic Viewer</a>
+        </div>
+    </div>
+
+    <!-- Content body -->
+    <div class="container">
+        <div class="left">
+          <h1>Welcome to 3D View</h1>
+          <p style="text-align: justify;">3D View website is a free and open-source web solution that allows users to visualize and explore 3D models in their browser without any software application.</p>
+        </div>
+        
+        <div class="right">
+          <img src="https://i.postimg.cc/26nbdkQL/3d-rendering-ui-icon-23-2149182289.jpg" alt="Image">
+        </div>
+    </div>
+
+    <p>This website uses cookies to offer you better user experience. See the details at the Cookies Policy page.</p>
+
+    <!-- Upload the Files Sections -->
+    <div class="boxcontainer">
+        <br>
+        <form id="upload-form">
+            
+            <br>
+
+            <h2>Upload Files - 3D</h2>
+
+            <div class="form-group">
+                <input type="file" id="file-input" name="file" accept=".glb,.gltf">
+                <label for="file-input" id="file-label"><i class="fa fa-folder"></i> &nbsp; Choose a file</label>
+
+                <div id="progressBarContainer">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+
+            <label>Supported formats:</label> &nbsp;&nbsp; <span>.glb</span> &nbsp; <span>.gltb</span>
+
+            <div class="form-group">
+                <input id="submit-btn" class="button" type="submit" value="Upload File">
+                <input id="reset-btn" class="button" type="reset" value="Remove / Reset File">
+            </div>
+        
+            <p>By uploading an image or file you agree to our Terms of Use and Privacy Policy.</p>
+            <br>
+        </form>
+    </div>
+
+    <!-- Canvas Section -->
+    
+    <canvas class = "webgl"></canvas> 
+
+    <!-- Footer -->
+    <div class="footer">
+        <br>
+        <p>Designed by <b><i>KAAVIASUDHAN</i></b>, CIT,.</p>
+        <p>Deep Vision Tech. Task 2023</p>
+        <br>
+    </div>
+
+    <!-- Script Js -->
+    <script type="importmap" >
+        {
+            "imports": {
+                "three": "./three.js-master/build/three.module.js"
+            }
+        }
+    </script>
+    <script type ="module" src="script.js"></script>
+</body>
+</html>
